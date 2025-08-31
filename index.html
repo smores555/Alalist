@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pilot Seniority — Interactive What‑If</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Pilot Seniority — Interactive What‑If</h1>
+      <div class="inputs">
+        <label>Enter Seniority #
+          <input type="number" id="sn" min="1" step="1" placeholder="e.g., 2670">
+        </label>
+        <label>Base
+          <select id="base"></select>
+        </label>
+        <label>Seat
+          <select id="seat"></select>
+        </label>
+        <button id="calc">Calculate</button>
+        <button id="compare">Compare All Bases</button>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Best Base by Seat</h2>
+      <table id="best">
+        <thead>
+          <tr>
+            <th class="c-seat">Seat</th>
+            <th class="c-base">Base</th>
+            <th class="c-rank">Rank in base</th>
+            <th class="c-total">Total in base</th>
+            <th class="c-pct">Base % (rank/total)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2 id="listTitle">Pilot list</h2>
+      <div class="hint">Your position is highlighted in green; we also show surrounding pilots.</div>
+      <div class="table-wrap">
+        <table id="list">
+          <thead>
+            <tr>
+              <th class="c-snr">Original Seniority #</th>
+              <th class="c-base">Base</th>
+              <th class="c-seat">Position</th>
+              <th class="c-name">Name</th>
+              <th class="c-doh">Date of Hire</th>
+              <th class="c-ret">Retirement Date</th>
+              <th class="c-rank">Seniority at Base</th>
+              <th class="c-rank">Base Rank</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
